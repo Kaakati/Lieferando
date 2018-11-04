@@ -13,9 +13,11 @@
 		2B08B6BB218F2D8200E90AD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B08B6BA218F2D8200E90AD1 /* Assets.xcassets */; };
 		2B08B6BE218F2D8200E90AD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B08B6BC218F2D8200E90AD1 /* LaunchScreen.storyboard */; };
 		2B08B6C9218F2DD400E90AD1 /* RestaurantsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6C8218F2DD400E90AD1 /* RestaurantsListVC.swift */; };
+		A7FE0B34F4AA61603C9D8237 /* Pods_Lieferando.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6944836217FC3BAE603F329F /* Pods_Lieferando.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C90EEE065FD3BED21AA5AD4 /* Pods-Lieferando.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lieferando.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lieferando/Pods-Lieferando.release.xcconfig"; sourceTree = "<group>"; };
 		2B08B6B0218F2D7F00E90AD1 /* Lieferando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lieferando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B08B6B3218F2D7F00E90AD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B08B6B5218F2D7F00E90AD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		2B08B6BD218F2D8200E90AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B08B6BF218F2D8200E90AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B08B6C8218F2DD400E90AD1 /* RestaurantsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsListVC.swift; sourceTree = "<group>"; };
+		6944836217FC3BAE603F329F /* Pods_Lieferando.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lieferando.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5CA44EE117E460292929C35 /* Pods-Lieferando.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lieferando.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lieferando/Pods-Lieferando.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7FE0B34F4AA61603C9D8237 /* Pods_Lieferando.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				2B08B6B2218F2D7F00E90AD1 /* Lieferando */,
 				2B08B6B1218F2D7F00E90AD1 /* Products */,
+				72550161F8DE83361E810DAA /* Pods */,
+				49553CBA5522766B602C21F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +98,23 @@
 			path = "Restaurants List";
 			sourceTree = "<group>";
 		};
+		49553CBA5522766B602C21F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6944836217FC3BAE603F329F /* Pods_Lieferando.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72550161F8DE83361E810DAA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5CA44EE117E460292929C35 /* Pods-Lieferando.debug.xcconfig */,
+				0C90EEE065FD3BED21AA5AD4 /* Pods-Lieferando.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,9 +122,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B08B6C2218F2D8200E90AD1 /* Build configuration list for PBXNativeTarget "Lieferando" */;
 			buildPhases = (
+				B95012BC29B998F099DF850E /* [CP] Check Pods Manifest.lock */,
 				2B08B6AC218F2D7F00E90AD1 /* Sources */,
 				2B08B6AD218F2D7F00E90AD1 /* Frameworks */,
 				2B08B6AE218F2D7F00E90AD1 /* Resources */,
+				2DF6A56303EFF4FC5DF3E371 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +182,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DF6A56303EFF4FC5DF3E371 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Lieferando/Pods-Lieferando-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lieferando/Pods-Lieferando-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B95012BC29B998F099DF850E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lieferando-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2B08B6AC218F2D7F00E90AD1 /* Sources */ = {
@@ -308,6 +385,7 @@
 		};
 		2B08B6C3218F2D8200E90AD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5CA44EE117E460292929C35 /* Pods-Lieferando.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -326,6 +404,7 @@
 		};
 		2B08B6C4218F2D8200E90AD1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C90EEE065FD3BED21AA5AD4 /* Pods-Lieferando.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
