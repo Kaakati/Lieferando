@@ -13,8 +13,8 @@
 		2B08B6C9218F2DD400E90AD1 /* RestaurantsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6C8218F2DD400E90AD1 /* RestaurantsListVC.swift */; };
 		2B08B6CC218F363700E90AD1 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6CB218F363700E90AD1 /* Theme.swift */; };
 		2B08B6CF218F38F400E90AD1 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6CE218F38F400E90AD1 /* Restaurant.swift */; };
-		2B08B6D2218F39B000E90AD1 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6D1218F39B000E90AD1 /* HTTPMethod.swift */; };
-		2B08B6D4218F39D100E90AD1 /* TakeAwayAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6D3218F39D100E90AD1 /* TakeAwayAPI.swift */; };
+		2B08B6E1218F48D800E90AD1 /* RealmHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6E0218F48D800E90AD1 /* RealmHandler.swift */; };
+		2B08B6E3218F490A00E90AD1 /* RestaurantEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6E2218F490A00E90AD1 /* RestaurantEntity.swift */; };
 		A7FE0B34F4AA61603C9D8237 /* Pods_Lieferando.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6944836217FC3BAE603F329F /* Pods_Lieferando.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,8 +28,8 @@
 		2B08B6C8218F2DD400E90AD1 /* RestaurantsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsListVC.swift; sourceTree = "<group>"; };
 		2B08B6CB218F363700E90AD1 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		2B08B6CE218F38F400E90AD1 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		2B08B6D1218F39B000E90AD1 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		2B08B6D3218F39D100E90AD1 /* TakeAwayAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeAwayAPI.swift; sourceTree = "<group>"; };
+		2B08B6E0218F48D800E90AD1 /* RealmHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHandler.swift; sourceTree = "<group>"; };
+		2B08B6E2218F490A00E90AD1 /* RestaurantEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantEntity.swift; sourceTree = "<group>"; };
 		6944836217FC3BAE603F329F /* Pods_Lieferando.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lieferando.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CA44EE117E460292929C35 /* Pods-Lieferando.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lieferando.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lieferando/Pods-Lieferando.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +69,7 @@
 			children = (
 				2B08B6CA218F361E00E90AD1 /* Resources */,
 				2B08B6C6218F2D9400E90AD1 /* Modules */,
+				2B08B6DF218F48B500E90AD1 /* Database */,
 				2B08B6C5218F2D8D00E90AD1 /* DataLayer */,
 				2B08B6B3218F2D7F00E90AD1 /* AppDelegate.swift */,
 				2B08B6BF218F2D8200E90AD1 /* Info.plist */,
@@ -79,7 +80,6 @@
 		2B08B6C5218F2D8D00E90AD1 /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
-				2B08B6D0218F39A000E90AD1 /* WebService */,
 				2B08B6CD218F38E300E90AD1 /* Models */,
 			);
 			path = DataLayer;
@@ -119,13 +119,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		2B08B6D0218F39A000E90AD1 /* WebService */ = {
+		2B08B6DF218F48B500E90AD1 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				2B08B6D1218F39B000E90AD1 /* HTTPMethod.swift */,
-				2B08B6D3218F39D100E90AD1 /* TakeAwayAPI.swift */,
+				2B08B6E0218F48D800E90AD1 /* RealmHandler.swift */,
+				2B08B6E2218F490A00E90AD1 /* RestaurantEntity.swift */,
 			);
-			path = WebService;
+			path = Database;
 			sourceTree = "<group>";
 		};
 		49553CBA5522766B602C21F9 /* Frameworks */ = {
@@ -222,6 +222,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Lieferando/Pods-Lieferando-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
@@ -230,6 +232,8 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
@@ -269,10 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B08B6CF218F38F400E90AD1 /* Restaurant.swift in Sources */,
-				2B08B6D4218F39D100E90AD1 /* TakeAwayAPI.swift in Sources */,
+				2B08B6E3218F490A00E90AD1 /* RestaurantEntity.swift in Sources */,
+				2B08B6E1218F48D800E90AD1 /* RealmHandler.swift in Sources */,
 				2B08B6CC218F363700E90AD1 /* Theme.swift in Sources */,
 				2B08B6C9218F2DD400E90AD1 /* RestaurantsListVC.swift in Sources */,
-				2B08B6D2218F39B000E90AD1 /* HTTPMethod.swift in Sources */,
 				2B08B6B4218F2D7F00E90AD1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

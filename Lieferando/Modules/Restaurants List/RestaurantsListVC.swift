@@ -8,10 +8,20 @@
 
 import UIKit
 import SwifterSwift
+import RealmSwift
+import Realm
 
 class RestaurantsListVC: UIViewController {
-
+    
     let restaurantCellId = "RestaurantCellId"
+    
+    var restaurants : Results<RestaurantEntity>? {
+        didSet {
+            print(restaurants)
+            self.tableView.reloadData()
+        }
+    }
+    var notificationToken: NotificationToken?
     
     lazy var tableView : UITableView = {
         let tbl = UITableView()
@@ -27,13 +37,24 @@ class RestaurantsListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUIComponents()
-        // Do any additional setup after loading the view.
     }
     
     private func setupUIComponents() {
         self.title = "Restaurants List"
         self.view.addSubview(tableView)
         setupConstraints()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        self.fetchRestaurantsList()
+        notificationToken = RealmHandler.shared.realm.observe { [unowned self] note, realm in
+            self.restaurants = RealmHandler.shared.realm.objects(RestaurantEntity.self)
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        notificationToken?.invalidate()
     }
     
     private func setupConstraints() {
@@ -58,12 +79,15 @@ extension RestaurantsListVC : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return self.restaurants?.count ?? 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: self.restaurantCellId, for: indexPath)
-        cell.textLabel?.text = "Demo Cell"
+        if let restaurant = restaurants?[indexPath.row] {
+            cell.textLabel?.text = restaurant.name
+        }
         return cell
     }
     
@@ -75,3 +99,8 @@ extension RestaurantsListVC : UITableViewDelegate {
     }
 }
 
+extension RestaurantsListVC {
+    private func fetchRestaurantsList() {
+        self.restaurants = RealmHandler.shared.realm.objects(RestaurantEntity.self)
+    }
+}

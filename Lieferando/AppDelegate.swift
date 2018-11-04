@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +18,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        setupRealmConfigurations() // Reset Realm
         setupHomeScreen(asView: RestaurantsListVC())
+        
+        Restaurant.list { (result) in
+            print(result)
+            
+            result.forEach({ (res) in
+                let restaurant = RestaurantEntity()
+                restaurant.name = res.name ?? "N/A"
+                restaurant.status = res.status ?? "closed"
+                
+                RealmHandler.shared.writeToRealm(restaurant)
+            })
+        }
+
         return true
     }
 
@@ -59,4 +76,33 @@ extension AppDelegate {
         window?.makeKeyAndVisible()
     }
     
+    // Setup Realm Migration, Delete Whatever previously stored.
+    private func setupRealmConfigurations() {
+        // Realm Configurations
+        // This will prevent the app from crashing on users devices incase of migration.
+        try? FileManager.default.removeItem(at: Realm.Configuration.defaultConfiguration.fileURL!)
+        
+        // Realm Migration
+        let config = Realm.Configuration(
+            // Set the new schema version. This must be greater than the previously used
+            // version (if you've never set a schema version before, the version is 0).
+            schemaVersion: 1,
+            // Set the block which will be called automatically when opening a Realm with
+            // a schema version lower than the one set above
+            migrationBlock: { migration, oldSchemaVersion in
+                // We haven’t migrated anything yet, so oldSchemaVersion == 0
+                if (oldSchemaVersion < 1) {
+                    // Nothing to do!
+                    // Realm will automatically detect new properties and removed properties
+                    // And will update the schema on disk automatically
+                }
+        })
+        
+        // Tell Realm to use this new configuration object for the default Realm
+        Realm.Configuration.defaultConfiguration = config
+        
+        // Now that we've told Realm how to handle the schema change, opening the file
+        // will automatically perform the migration
+        _ = try? Realm()
+    }
 }

@@ -8,6 +8,6 @@ target 'Lieferando' do
   # Pods for Lieferando
     pod 'RealmSwift'
     pod 'SwifterSwift'
-
-
+    pod 'Alamofire', '~> 4.7'
+    pod 'CodableAlamofire'
 end
