@@ -1,29 +1,30 @@
 //
-//  RestaurantEntity.swift
+//  ETAVendorsList.swift
 //  Lieferando
 //
-//  Created by Mohamad Kaakati on 11/4/18.
+//  Created Mohamad Kaakati on 11/5/18.
 //  Copyright © 2018 Mohamad Kaakati. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Realm
 import RealmSwift
 
-class RestaurantEntity : Object {
+/// TAVendorsList Module Entity
+class ETAVendorsList : Object {
     
     @objc dynamic var id : String = UUID().uuidString
     @objc dynamic var name : String = ""
     @objc dynamic var isFavourite : Bool = false
     @objc dynamic var status : String = ""
-    var sortingValues = List<sortingValues>()
+    var sortingValues = List<ETASortingValues>()
     
     override static func primaryKey() -> String? {
         return "id"
     }
 }
 
-class sortingValues : Object {
+class ETASortingValues : Object {
     
     @objc dynamic var id : String = UUID().uuidString
     @objc dynamic var bestMatch : Double = 0.0

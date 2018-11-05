@@ -20,20 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         setupRealmConfigurations() // Reset Realm
-        setupHomeScreen(asView: RestaurantsListVC())
+        setupHomeScreen(asView: VTAVendorsList())
         
-        Restaurant.list { (result) in
-            print(result)
-            
-            result.forEach({ (res) in
-                let restaurant = RestaurantEntity()
-                restaurant.name = res.name ?? "N/A"
-                restaurant.status = res.status ?? "closed"
-                
-                RealmHandler.shared.writeToRealm(restaurant)
-            })
-        }
-
         return true
     }
 

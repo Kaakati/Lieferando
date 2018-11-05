@@ -22,7 +22,6 @@ class RealmHandler {
         // Write Transactions Should Always be on the main thread.
         DispatchQueue.main.async {
             try! self.realm.write {
-                print(object)
                 self.realm.add(object, update: true)
             }
         }

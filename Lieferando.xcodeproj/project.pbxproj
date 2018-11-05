@@ -14,7 +14,16 @@
 		2B08B6CC218F363700E90AD1 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6CB218F363700E90AD1 /* Theme.swift */; };
 		2B08B6CF218F38F400E90AD1 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6CE218F38F400E90AD1 /* Restaurant.swift */; };
 		2B08B6E1218F48D800E90AD1 /* RealmHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6E0218F48D800E90AD1 /* RealmHandler.swift */; };
-		2B08B6E3218F490A00E90AD1 /* RestaurantEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6E2218F490A00E90AD1 /* RestaurantEntity.swift */; };
+		2B08B6E62190686100E90AD1 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6E52190686100E90AD1 /* APIClient.swift */; };
+		2B08B6FF21906BAC00E90AD1 /* VTAVendorsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6F821906BAC00E90AD1 /* VTAVendorsList.swift */; };
+		2B08B70021906BAC00E90AD1 /* CTAVendorsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6F921906BAC00E90AD1 /* CTAVendorsList.swift */; };
+		2B08B70121906BAC00E90AD1 /* VTAVendorsListUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6FA21906BAC00E90AD1 /* VTAVendorsListUI.swift */; };
+		2B08B70221906BAC00E90AD1 /* RTAVendorsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6FB21906BAC00E90AD1 /* RTAVendorsList.swift */; };
+		2B08B70321906BAC00E90AD1 /* ETAVendorsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6FC21906BAC00E90AD1 /* ETAVendorsList.swift */; };
+		2B08B70421906BAC00E90AD1 /* PTAVendorsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6FD21906BAC00E90AD1 /* PTAVendorsList.swift */; };
+		2B08B70521906BAC00E90AD1 /* ITAVendorsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6FE21906BAC00E90AD1 /* ITAVendorsList.swift */; };
+		2B08B707219070B700E90AD1 /* VendorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B706219070B700E90AD1 /* VendorCell.swift */; };
+		2B08B70A2190879C00E90AD1 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B7092190879C00E90AD1 /* BaseViewProtocol.swift */; };
 		A7FE0B34F4AA61603C9D8237 /* Pods_Lieferando.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6944836217FC3BAE603F329F /* Pods_Lieferando.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +38,16 @@
 		2B08B6CB218F363700E90AD1 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		2B08B6CE218F38F400E90AD1 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		2B08B6E0218F48D800E90AD1 /* RealmHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHandler.swift; sourceTree = "<group>"; };
-		2B08B6E2218F490A00E90AD1 /* RestaurantEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantEntity.swift; sourceTree = "<group>"; };
+		2B08B6E52190686100E90AD1 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		2B08B6F821906BAC00E90AD1 /* VTAVendorsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTAVendorsList.swift; sourceTree = "<group>"; };
+		2B08B6F921906BAC00E90AD1 /* CTAVendorsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAVendorsList.swift; sourceTree = "<group>"; };
+		2B08B6FA21906BAC00E90AD1 /* VTAVendorsListUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTAVendorsListUI.swift; sourceTree = "<group>"; };
+		2B08B6FB21906BAC00E90AD1 /* RTAVendorsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTAVendorsList.swift; sourceTree = "<group>"; };
+		2B08B6FC21906BAC00E90AD1 /* ETAVendorsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETAVendorsList.swift; sourceTree = "<group>"; };
+		2B08B6FD21906BAC00E90AD1 /* PTAVendorsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTAVendorsList.swift; sourceTree = "<group>"; };
+		2B08B6FE21906BAC00E90AD1 /* ITAVendorsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITAVendorsList.swift; sourceTree = "<group>"; };
+		2B08B706219070B700E90AD1 /* VendorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorCell.swift; sourceTree = "<group>"; };
+		2B08B7092190879C00E90AD1 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
 		6944836217FC3BAE603F329F /* Pods_Lieferando.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lieferando.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CA44EE117E460292929C35 /* Pods-Lieferando.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lieferando.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lieferando/Pods-Lieferando.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +98,7 @@
 		2B08B6C5218F2D8D00E90AD1 /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				2B08B6E42190682E00E90AD1 /* WebService */,
 				2B08B6CD218F38E300E90AD1 /* Models */,
 			);
 			path = DataLayer;
@@ -88,6 +107,7 @@
 		2B08B6C6218F2D9400E90AD1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2B08B7082190878000E90AD1 /* Base View */,
 				2B08B6C7218F2DA000E90AD1 /* Restaurants List */,
 			);
 			path = Modules;
@@ -97,6 +117,14 @@
 			isa = PBXGroup;
 			children = (
 				2B08B6C8218F2DD400E90AD1 /* RestaurantsListVC.swift */,
+				2B08B6F721906B1200E90AD1 /* Custom Cells */,
+				2B08B6F621906B0B00E90AD1 /* UI Components */,
+				2B08B6F821906BAC00E90AD1 /* VTAVendorsList.swift */,
+				2B08B6F921906BAC00E90AD1 /* CTAVendorsList.swift */,
+				2B08B6FB21906BAC00E90AD1 /* RTAVendorsList.swift */,
+				2B08B6FC21906BAC00E90AD1 /* ETAVendorsList.swift */,
+				2B08B6FD21906BAC00E90AD1 /* PTAVendorsList.swift */,
+				2B08B6FE21906BAC00E90AD1 /* ITAVendorsList.swift */,
 			);
 			path = "Restaurants List";
 			sourceTree = "<group>";
@@ -123,9 +151,40 @@
 			isa = PBXGroup;
 			children = (
 				2B08B6E0218F48D800E90AD1 /* RealmHandler.swift */,
-				2B08B6E2218F490A00E90AD1 /* RestaurantEntity.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		2B08B6E42190682E00E90AD1 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				2B08B6E52190686100E90AD1 /* APIClient.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		2B08B6F621906B0B00E90AD1 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				2B08B6FA21906BAC00E90AD1 /* VTAVendorsListUI.swift */,
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		2B08B6F721906B1200E90AD1 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2B08B706219070B700E90AD1 /* VendorCell.swift */,
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		2B08B7082190878000E90AD1 /* Base View */ = {
+			isa = PBXGroup;
+			children = (
+				2B08B7092190879C00E90AD1 /* BaseViewProtocol.swift */,
+			);
+			path = "Base View";
 			sourceTree = "<group>";
 		};
 		49553CBA5522766B602C21F9 /* Frameworks */ = {
@@ -272,10 +331,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B08B70021906BAC00E90AD1 /* CTAVendorsList.swift in Sources */,
 				2B08B6CF218F38F400E90AD1 /* Restaurant.swift in Sources */,
-				2B08B6E3218F490A00E90AD1 /* RestaurantEntity.swift in Sources */,
+				2B08B6E62190686100E90AD1 /* APIClient.swift in Sources */,
+				2B08B6FF21906BAC00E90AD1 /* VTAVendorsList.swift in Sources */,
 				2B08B6E1218F48D800E90AD1 /* RealmHandler.swift in Sources */,
+				2B08B707219070B700E90AD1 /* VendorCell.swift in Sources */,
+				2B08B70321906BAC00E90AD1 /* ETAVendorsList.swift in Sources */,
 				2B08B6CC218F363700E90AD1 /* Theme.swift in Sources */,
+				2B08B70A2190879C00E90AD1 /* BaseViewProtocol.swift in Sources */,
+				2B08B70221906BAC00E90AD1 /* RTAVendorsList.swift in Sources */,
+				2B08B70421906BAC00E90AD1 /* PTAVendorsList.swift in Sources */,
+				2B08B70121906BAC00E90AD1 /* VTAVendorsListUI.swift in Sources */,
+				2B08B70521906BAC00E90AD1 /* ITAVendorsList.swift in Sources */,
 				2B08B6C9218F2DD400E90AD1 /* RestaurantsListVC.swift in Sources */,
 				2B08B6B4218F2D7F00E90AD1 /* AppDelegate.swift in Sources */,
 			);
