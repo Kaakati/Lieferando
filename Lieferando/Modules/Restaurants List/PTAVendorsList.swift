@@ -22,11 +22,25 @@ class PTAVendorsList {
         self.interactor = ITAVendorsList()
         self.wireframe = RTAVendorsList()
         view.setNavigationBarTitleWith("Restaurants List")
+        
+        let filterBtn = UIBarButtonItem(image: UIImage(named: "ic_filter"),
+                                        style: .plain, target: self,
+                                        action: #selector(filterAction))
+        view.setupNavigationItem(filterBtn)
     }
 }
 
 // MARK: - extending PTAVendorsList to implement it's protocol
 extension PTAVendorsList: PTAVendorsListProtocol {
+
+    func userDidTapFilterBtn(_ onView: VTAVendorsListProtocol) {
+        self.filterAction()
+    }
+
+    // Send Favourite Button Even to Interactor
+    func userDidTapFavouriteBtn(_ onView: VTAVendorsListProtocol, forObject id: String) {
+        interactor.userDidTapFavouriteBtn(self, forObject: id)
+    }
     
     func fetch(objectFor view: VTAVendorsListProtocol) {
         // Inform The Interactor to Fetch Objects for This Protocol
@@ -44,6 +58,11 @@ extension PTAVendorsList: PTAVendorsListProtocol {
     
     func viewDidFilterResults(_ interactor: ITAVendorsListProtocol) {
         interactor.filterResults(objectFor: self)
+    }
+    
+    @objc func filterAction() {
+        print("filter")
+        view?.shouldOpenFilters(view!)
     }
 
 }

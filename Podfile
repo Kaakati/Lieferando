@@ -10,4 +10,6 @@ target 'Lieferando' do
     pod 'SwifterSwift'
     pod 'Alamofire', '~> 4.7'
     pod 'CodableAlamofire'
+    pod 'Cosmos', '~> 17.0'
+    
 end

@@ -19,7 +19,6 @@ class VTAVendorsList: UIViewController {
     private var object : Results<ETAVendorsList>? {
         didSet {
             if object != nil {
-                print(object)
                 self.ui.reloadData()
             }
         }
@@ -30,20 +29,23 @@ class VTAVendorsList: UIViewController {
 		ui.delegate = self
 		ui.dataSource = self
 		view = ui
-  }
+    }
 
 	override func viewDidLoad() {
         super.viewDidLoad()
         presenter = PTAVendorsList(view: self)
-
 		// Informs the Presenter that the View is ready to receive data.
 		presenter.fetch(objectFor: self)
-  }
-
+    }
+    
 }
 
 // MARK: - extending VTAVendorsList to implement it's protocol
 extension VTAVendorsList: VTAVendorsListProtocol {
+    func shouldOpenFilters(_ forView: VTAVendorsListProtocol) {
+        self.view.addSubview(self.ui.filterPicker)
+    }
+    
     func set(object: Results<ETAVendorsList>?) {
         self.object = object
     }
@@ -51,7 +53,14 @@ extension VTAVendorsList: VTAVendorsListProtocol {
 
 // MARK: - extending VTAVendorsList to implement the custom ui view delegate
 extension VTAVendorsList: VTAVendorsListUIDelegate {
-
+    func userDidTapFilterButton() {
+        presenter.userDidTapFilterBtn(self)
+    }
+    
+    // Send Favourite Button Event to Presenter
+    func userDidTapFavouriteBtn(_ onItemID: String) {
+        presenter.userDidTapFavouriteBtn(self, forObject: onItemID)
+    }
 }
 
 // MARK: - extending VTAVendorsList to implement the custom ui view data source

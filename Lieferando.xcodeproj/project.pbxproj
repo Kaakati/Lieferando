@@ -24,6 +24,7 @@
 		2B08B70521906BAC00E90AD1 /* ITAVendorsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6FE21906BAC00E90AD1 /* ITAVendorsList.swift */; };
 		2B08B707219070B700E90AD1 /* VendorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B706219070B700E90AD1 /* VendorCell.swift */; };
 		2B08B70A2190879C00E90AD1 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B7092190879C00E90AD1 /* BaseViewProtocol.swift */; };
+		2B08B70C2191C29A00E90AD1 /* VendorCellUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B70B2191C29A00E90AD1 /* VendorCellUI.swift */; };
 		A7FE0B34F4AA61603C9D8237 /* Pods_Lieferando.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6944836217FC3BAE603F329F /* Pods_Lieferando.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		2B08B6FE21906BAC00E90AD1 /* ITAVendorsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITAVendorsList.swift; sourceTree = "<group>"; };
 		2B08B706219070B700E90AD1 /* VendorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorCell.swift; sourceTree = "<group>"; };
 		2B08B7092190879C00E90AD1 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
+		2B08B70B2191C29A00E90AD1 /* VendorCellUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorCellUI.swift; sourceTree = "<group>"; };
 		6944836217FC3BAE603F329F /* Pods_Lieferando.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lieferando.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CA44EE117E460292929C35 /* Pods-Lieferando.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lieferando.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lieferando/Pods-Lieferando.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				2B08B706219070B700E90AD1 /* VendorCell.swift */,
+				2B08B70B2191C29A00E90AD1 /* VendorCellUI.swift */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Lieferando/Pods-Lieferando-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
@@ -293,6 +297,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
@@ -340,6 +345,7 @@
 				2B08B70321906BAC00E90AD1 /* ETAVendorsList.swift in Sources */,
 				2B08B6CC218F363700E90AD1 /* Theme.swift in Sources */,
 				2B08B70A2190879C00E90AD1 /* BaseViewProtocol.swift in Sources */,
+				2B08B70C2191C29A00E90AD1 /* VendorCellUI.swift in Sources */,
 				2B08B70221906BAC00E90AD1 /* RTAVendorsList.swift in Sources */,
 				2B08B70421906BAC00E90AD1 /* PTAVendorsList.swift in Sources */,
 				2B08B70121906BAC00E90AD1 /* VTAVendorsListUI.swift in Sources */,

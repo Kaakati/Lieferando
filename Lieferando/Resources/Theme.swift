@@ -16,8 +16,8 @@ extension UIApplication {
 
 struct Themes {
     struct Fonts {
-        let Title = UIFont.systemFont(ofSize: 18)
-        let Description = UIFont.systemFont(ofSize: 15)
-        let Tags = UIFont.systemFont(ofSize: 12)
+        static let Title = UIFont.boldSystemFont(ofSize: 18)
+        static let Description = UIFont.systemFont(ofSize: 14)
+        static let Tags = UIFont.systemFont(ofSize: 13)
     }
 }

@@ -17,7 +17,7 @@ class ETAVendorsList : Object {
     @objc dynamic var name : String = ""
     @objc dynamic var isFavourite : Bool = false
     @objc dynamic var status : String = ""
-    var sortingValues = List<ETASortingValues>()
+    @objc dynamic var sortingValues : ETASortingValues?
     
     override static func primaryKey() -> String? {
         return "id"

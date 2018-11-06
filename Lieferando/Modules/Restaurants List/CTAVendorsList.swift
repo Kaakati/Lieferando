@@ -21,6 +21,9 @@ protocol VTAVendorsListProtocol: BaseViewProtocol {
 	// Update UI with value returned.
 	/// Set the view Object of Type ETAVendorsList
 	func set(object: Results<ETAVendorsList>?)
+    // Should Open Filters
+    func shouldOpenFilters(_ forView: VTAVendorsListProtocol)
+//    func shouldOpenFilters(_ forView: VTAVendorsListProtocol)
 }
 
 // MARK: Interactor -
@@ -30,6 +33,11 @@ protocol ITAVendorsListProtocol {
 	func fetch(objectFor presenter: PTAVendorsListProtocol)
     // User Did Filter Results
     func filterResults(objectFor presenter: PTAVendorsListProtocol)
+    //
+    func userDidTapFavouriteBtn(_ presenter: PTAVendorsListProtocol, forObject id: String)
+    //
+    func userDidTapFavouriteBtn(_ presenter: PTAVendorsListProtocol)
+    //
 }
 
 // MARK: Presenter -
@@ -43,6 +51,11 @@ protocol PTAVendorsListProtocol {
 	func interactor(_ interactor: ITAVendorsListProtocol, didFailWith error: Error)
     
     func viewDidFilterResults(_ interactor: ITAVendorsListProtocol)
+    
+    func userDidTapFavouriteBtn(_ onView: VTAVendorsListProtocol, forObject id: String)
+    
+    func userDidTapFilterBtn(_ onView: VTAVendorsListProtocol)
+//    func shouldOpenFilters(_ fromView: VTAVendorsListProtocol, withValues value: String)
 }
 
 // MARK: Router (aka: Wireframe) -

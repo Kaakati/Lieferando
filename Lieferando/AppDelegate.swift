@@ -59,7 +59,6 @@ extension AppDelegate {
         UINavigationBar.appearance().barStyle = .blackOpaque
         self.window?.backgroundColor = UIColor.white
         window?.rootViewController = UINavigationController(rootViewController: view)
-//        view.navigationController?.makeTransparent(withTint: .orange)
         view.navigationController?.navigationBar.setColors(background: .orange, text: .white)
         window?.makeKeyAndVisible()
     }
