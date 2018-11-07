@@ -146,19 +146,11 @@ class VendorCellUI: UIView {
                                 bottom: nil,
                                 right: nil,
                                 topConstant: 0,
-                                leftConstant: 10,
+                                leftConstant: 0,
                                 bottomConstant: 0,
                                 rightConstant: 0,
                                 widthConstant: 50,
                                 heightConstant: 50)
-        
-        self.vendorName.heightAnchor.constraint(equalToConstant: 17).isActive = true
-        self.vendorStatus.heightAnchor.constraint(equalToConstant: 17).isActive = true
-        self.vendorMinCost.heightAnchor.constraint(equalToConstant: 17).isActive = true
-        self.vendorDelivery.heightAnchor.constraint(equalToConstant: 17).isActive = true
-        self.vendorDistance.heightAnchor.constraint(equalToConstant: 17).isActive = true
-        self.vendorRatingAvg.heightAnchor.constraint(equalToConstant: 17).isActive = true
-        self.vendorBestMatch.heightAnchor.constraint(equalToConstant: 17).isActive = true
         
         self.vStackView.anchor(top: self.topAnchor,
                                left: self.vendorImage.rightAnchor,

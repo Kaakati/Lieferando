@@ -42,17 +42,23 @@ class VTAVendorsList: UIViewController {
 
 // MARK: - extending VTAVendorsList to implement it's protocol
 extension VTAVendorsList: VTAVendorsListProtocol {
-    func shouldOpenFilters(_ forView: VTAVendorsListProtocol) {
-        self.view.addSubview(self.ui.filterPicker)
-    }
     
     func set(object: Results<ETAVendorsList>?) {
         self.object = object
+    }
+    
+    func shouldOpenFilters(_ forView: VTAVendorsListProtocol) {
+        self.ui.filterHiddenInput.becomeFirstResponder()
     }
 }
 
 // MARK: - extending VTAVendorsList to implement the custom ui view delegate
 extension VTAVendorsList: VTAVendorsListUIDelegate {
+    
+    func userSearchEvent(_ ofString: String) {
+        presenter.userSearchEvent(ofString)
+    }
+    
     func userDidTapFilterButton() {
         presenter.userDidTapFilterBtn(self)
     }

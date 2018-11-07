@@ -19,6 +19,7 @@ protocol VTAVendorsListUIDelegate {
     
     func userDidTapFilterButton()
 //    func userDidSelectFilter(_ filterValue : String)
+    func userSearchEvent(_ ofString: String)
 }
 
 // MARK: VTAVendorsListUI Data Source -
@@ -62,6 +63,26 @@ class VTAVendorsListUI: UIView {
         pv.translatesAutoresizingMaskIntoConstraints = false
         return pv
     }()
+    
+    lazy var filterHiddenInput : UITextField = {
+        let tf = UITextField()
+        tf.inputView = filterPicker
+        tf.isHidden = true
+        tf.inputAccessoryView = setToolbar()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        return tf
+    }()
+    
+    lazy var searchInput : UITextField = {
+        let tf = UITextField()
+        tf.backgroundColor = UIColor.init(hexString: "FAFAFA")
+        tf.addPaddingLeft(15) // SwifterSwift for the rescue.
+        tf.placeholder = "Search Restaurants"
+        tf.inputAccessoryView = setToolbar()
+        tf.addTarget(self, action: #selector(userSearchEvent(textField:)), for: UIControl.Event.editingChanged)
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        return tf
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -82,24 +103,26 @@ class VTAVendorsListUI: UIView {
 
     private func setupUIElements() {
         // arrange subviews
+        self.addSubview(searchInput)
         self.addSubview(tableView)
-        self.addSubview(filterPicker)
+        self.addSubview(filterHiddenInput)
     }
 
     private func setupConstraints() {
         // add constraints to subviews
-        self.filterPicker.anchor(top: nil,
-                                 left: self.leftAnchor,
-                                 bottom: self.bottomAnchor,
-                                 right: self.rightAnchor,
-                                 topConstant: 0,
-                                 leftConstant: 0,
-                                 bottomConstant: 0,
-                                 rightConstant: 0,
-                                 widthConstant: 0,
-                                 heightConstant: 0)
         
-        self.tableView.anchor(top: self.topAnchor,
+        self.searchInput.anchor(top: self.topAnchor,
+                                left: self.leftAnchor,
+                                bottom: nil,
+                                right: self.rightAnchor,
+                                topConstant: 0,
+                                leftConstant: 0,
+                                bottomConstant: 0,
+                                rightConstant: 0,
+                                widthConstant: 0,
+                                heightConstant: 44)
+        
+        self.tableView.anchor(top: searchInput.bottomAnchor,
                               left: self.leftAnchor,
                               bottom: self.bottomAnchor,
                               right: self.rightAnchor,
@@ -116,8 +139,30 @@ class VTAVendorsListUI: UIView {
 		// Should update UI
 		self.object = dataSource?.objectFor(view: self)
 	}
+    
+    @objc private func userSearchEvent(textField: UITextField) {
+        delegate?.userSearchEvent(searchInput.text!)
+        if searchInput.text!.isEmpty { // Should Hide Keyboard if textField became Empty.
+            endEditing(true)
+        }
+    }
+    
+    // Keyboard Toolbar
+    @objc private func setToolbar() -> UIToolbar {
+        let bar = UIToolbar()
+        let close = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(doneTapped))
+        bar.items = [close]
+        bar.sizeToFit()
+        
+        return bar
+    }
+    
+    @objc private func doneTapped() {
+        endEditing(true)
+    }
 }
 
+// MARK: - UITableView DataSource
 extension VTAVendorsListUI : UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -150,6 +195,7 @@ extension VTAVendorsListUI : UITableViewDataSource {
     
 }
 
+// MARK: - UITableView Delegate
 extension VTAVendorsListUI : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row)")

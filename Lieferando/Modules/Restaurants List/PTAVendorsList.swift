@@ -22,7 +22,7 @@ class PTAVendorsList {
         self.interactor = ITAVendorsList()
         self.wireframe = RTAVendorsList()
         view.setNavigationBarTitleWith("Restaurants List")
-        
+        //
         let filterBtn = UIBarButtonItem(image: UIImage(named: "ic_filter"),
                                         style: .plain, target: self,
                                         action: #selector(filterAction))
@@ -32,6 +32,12 @@ class PTAVendorsList {
 
 // MARK: - extending PTAVendorsList to implement it's protocol
 extension PTAVendorsList: PTAVendorsListProtocol {
+    
+    func userSearchEvent(_ stringValue: String) {
+        //
+        interactor.userSearchEvent(stringValue)
+    }
+    
 
     func userDidTapFilterBtn(_ onView: VTAVendorsListProtocol) {
         self.filterAction()

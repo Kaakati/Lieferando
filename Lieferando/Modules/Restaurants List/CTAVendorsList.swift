@@ -36,8 +36,7 @@ protocol ITAVendorsListProtocol {
     //
     func userDidTapFavouriteBtn(_ presenter: PTAVendorsListProtocol, forObject id: String)
     //
-    func userDidTapFavouriteBtn(_ presenter: PTAVendorsListProtocol)
-    //
+    func userSearchEvent(_ stringValue : String)
 }
 
 // MARK: Presenter -
@@ -56,6 +55,8 @@ protocol PTAVendorsListProtocol {
     
     func userDidTapFilterBtn(_ onView: VTAVendorsListProtocol)
 //    func shouldOpenFilters(_ fromView: VTAVendorsListProtocol, withValues value: String)
+    
+    func userSearchEvent(_ stringValue : String)
 }
 
 // MARK: Router (aka: Wireframe) -

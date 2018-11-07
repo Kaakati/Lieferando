@@ -17,6 +17,8 @@ class RealmHandler {
     
     let realm = try! Realm()
     
+    var RestaurantsResults : Results<ETAVendorsList>?
+    
     /// Save The Object to Realm
     func writeToRealm<T: Object>(_ object: T) {
         // Write Transactions Should Always be on the main thread.
