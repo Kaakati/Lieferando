@@ -12,4 +12,7 @@ target 'Lieferando' do
     pod 'CodableAlamofire'
     pod 'Cosmos', '~> 17.0'
     
+    target 'LieferandoTests' do
+        inherit! :complete
+    end
 end

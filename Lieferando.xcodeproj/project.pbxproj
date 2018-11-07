@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25EF6857913B0A0F29AF2C25 /* Pods_Lieferando_LieferandoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9832A8EB74772A810E3C6F /* Pods_Lieferando_LieferandoTests.framework */; };
 		2B08B6B4218F2D7F00E90AD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B6B3218F2D7F00E90AD1 /* AppDelegate.swift */; };
 		2B08B6BB218F2D8200E90AD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B08B6BA218F2D8200E90AD1 /* Assets.xcassets */; };
 		2B08B6BE218F2D8200E90AD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B08B6BC218F2D8200E90AD1 /* LaunchScreen.storyboard */; };
@@ -25,11 +26,23 @@
 		2B08B707219070B700E90AD1 /* VendorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B706219070B700E90AD1 /* VendorCell.swift */; };
 		2B08B70A2190879C00E90AD1 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B7092190879C00E90AD1 /* BaseViewProtocol.swift */; };
 		2B08B70C2191C29A00E90AD1 /* VendorCellUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B70B2191C29A00E90AD1 /* VendorCellUI.swift */; };
+		2B08B7142193591C00E90AD1 /* LieferandoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08B7132193591C00E90AD1 /* LieferandoTests.swift */; };
 		A7FE0B34F4AA61603C9D8237 /* Pods_Lieferando.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6944836217FC3BAE603F329F /* Pods_Lieferando.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2B08B7162193591C00E90AD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B08B6A8218F2D7F00E90AD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B08B6AF218F2D7F00E90AD1;
+			remoteInfo = Lieferando;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0C90EEE065FD3BED21AA5AD4 /* Pods-Lieferando.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lieferando.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lieferando/Pods-Lieferando.release.xcconfig"; sourceTree = "<group>"; };
+		1D7C92C9B3383FAF87A1A08F /* Pods-Lieferando-LieferandoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lieferando-LieferandoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lieferando-LieferandoTests/Pods-Lieferando-LieferandoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2B08B6B0218F2D7F00E90AD1 /* Lieferando.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lieferando.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B08B6B3218F2D7F00E90AD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B08B6BA218F2D8200E90AD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,8 +63,13 @@
 		2B08B706219070B700E90AD1 /* VendorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorCell.swift; sourceTree = "<group>"; };
 		2B08B7092190879C00E90AD1 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
 		2B08B70B2191C29A00E90AD1 /* VendorCellUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorCellUI.swift; sourceTree = "<group>"; };
+		2B08B7112193591C00E90AD1 /* LieferandoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LieferandoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B08B7132193591C00E90AD1 /* LieferandoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LieferandoTests.swift; sourceTree = "<group>"; };
+		2B08B7152193591C00E90AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6944836217FC3BAE603F329F /* Pods_Lieferando.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lieferando.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CA44EE117E460292929C35 /* Pods-Lieferando.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lieferando.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lieferando/Pods-Lieferando.debug.xcconfig"; sourceTree = "<group>"; };
+		CE9832A8EB74772A810E3C6F /* Pods_Lieferando_LieferandoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lieferando_LieferandoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D69853B974E2AF4D6BC9A7CA /* Pods-Lieferando-LieferandoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lieferando-LieferandoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lieferando-LieferandoTests/Pods-Lieferando-LieferandoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +81,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2B08B70E2193591C00E90AD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25EF6857913B0A0F29AF2C25 /* Pods_Lieferando_LieferandoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -70,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				2B08B6B2218F2D7F00E90AD1 /* Lieferando */,
+				2B08B7122193591C00E90AD1 /* LieferandoTests */,
 				2B08B6B1218F2D7F00E90AD1 /* Products */,
 				72550161F8DE83361E810DAA /* Pods */,
 				49553CBA5522766B602C21F9 /* Frameworks */,
@@ -80,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				2B08B6B0218F2D7F00E90AD1 /* Lieferando.app */,
+				2B08B7112193591C00E90AD1 /* LieferandoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,10 +218,20 @@
 			path = "Base View";
 			sourceTree = "<group>";
 		};
+		2B08B7122193591C00E90AD1 /* LieferandoTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B08B7132193591C00E90AD1 /* LieferandoTests.swift */,
+				2B08B7152193591C00E90AD1 /* Info.plist */,
+			);
+			path = LieferandoTests;
+			sourceTree = "<group>";
+		};
 		49553CBA5522766B602C21F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				6944836217FC3BAE603F329F /* Pods_Lieferando.framework */,
+				CE9832A8EB74772A810E3C6F /* Pods_Lieferando_LieferandoTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,6 +241,8 @@
 			children = (
 				A5CA44EE117E460292929C35 /* Pods-Lieferando.debug.xcconfig */,
 				0C90EEE065FD3BED21AA5AD4 /* Pods-Lieferando.release.xcconfig */,
+				1D7C92C9B3383FAF87A1A08F /* Pods-Lieferando-LieferandoTests.debug.xcconfig */,
+				D69853B974E2AF4D6BC9A7CA /* Pods-Lieferando-LieferandoTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -229,6 +269,26 @@
 			productReference = 2B08B6B0218F2D7F00E90AD1 /* Lieferando.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2B08B7102193591C00E90AD1 /* LieferandoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B08B7182193591C00E90AD1 /* Build configuration list for PBXNativeTarget "LieferandoTests" */;
+			buildPhases = (
+				E896E3E275D1A16C2D127A78 /* [CP] Check Pods Manifest.lock */,
+				2B08B70D2193591C00E90AD1 /* Sources */,
+				2B08B70E2193591C00E90AD1 /* Frameworks */,
+				2B08B70F2193591C00E90AD1 /* Resources */,
+				0098E2B253B414EDD54450E6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B08B7172193591C00E90AD1 /* PBXTargetDependency */,
+			);
+			name = LieferandoTests;
+			productName = LieferandoTests;
+			productReference = 2B08B7112193591C00E90AD1 /* LieferandoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -241,6 +301,10 @@
 				TargetAttributes = {
 					2B08B6AF218F2D7F00E90AD1 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					2B08B7102193591C00E90AD1 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2B08B6AF218F2D7F00E90AD1;
 					};
 				};
 			};
@@ -258,6 +322,7 @@
 			projectRoot = "";
 			targets = (
 				2B08B6AF218F2D7F00E90AD1 /* Lieferando */,
+				2B08B7102193591C00E90AD1 /* LieferandoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -272,9 +337,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2B08B70F2193591C00E90AD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0098E2B253B414EDD54450E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Lieferando-LieferandoTests/Pods-Lieferando-LieferandoTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lieferando-LieferandoTests/Pods-Lieferando-LieferandoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2DF6A56303EFF4FC5DF3E371 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -329,6 +433,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E896E3E275D1A16C2D127A78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lieferando-LieferandoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -355,7 +481,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2B08B70D2193591C00E90AD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B08B7142193591C00E90AD1 /* LieferandoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B08B7172193591C00E90AD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B08B6AF218F2D7F00E90AD1 /* Lieferando */;
+			targetProxy = 2B08B7162193591C00E90AD1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2B08B6BC218F2D8200E90AD1 /* LaunchScreen.storyboard */ = {
@@ -523,6 +665,48 @@
 			};
 			name = Release;
 		};
+		2B08B7192193591C00E90AD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D7C92C9B3383FAF87A1A08F /* Pods-Lieferando-LieferandoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2CF5GZW7X;
+				INFOPLIST_FILE = LieferandoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaakati.LieferandoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lieferando.app/Lieferando";
+			};
+			name = Debug;
+		};
+		2B08B71A2193591C00E90AD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D69853B974E2AF4D6BC9A7CA /* Pods-Lieferando-LieferandoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2CF5GZW7X;
+				INFOPLIST_FILE = LieferandoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaakati.LieferandoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lieferando.app/Lieferando";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -540,6 +724,15 @@
 			buildConfigurations = (
 				2B08B6C3218F2D8200E90AD1 /* Debug */,
 				2B08B6C4218F2D8200E90AD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B08B7182193591C00E90AD1 /* Build configuration list for PBXNativeTarget "LieferandoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B08B7192193591C00E90AD1 /* Debug */,
+				2B08B71A2193591C00E90AD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
