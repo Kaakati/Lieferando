@@ -91,29 +91,50 @@ class ITAVendorsList: ITAVendorsListProtocol {
     
     // Sorting
     func sortingResults(_ presenter: PTAVendorsListProtocol, filterType: AvailableSortings) {
+
         switch filterType {
         case .reset:
             print("User Selected: \(filterType.sorting!)")
+            sortingMethod(filterType.sorting!)
         case .status:
             print("User Selected: \(filterType.sorting!)")
+            sortingMethod(filterType.sorting!)
         case .rating:
             print("User Selected: \(filterType.sorting!)")
+            sortingMethod(filterType.sorting!)
         case .popularity:
             print("User Selected: \(filterType.sorting!)")
+            sortingMethod(filterType.sorting!)
         case .minimumCost:
             print("User Selected: \(filterType.sorting!)")
+            sortingMethod(filterType.sorting!)
         case .favourite:
             print("User Selected: \(filterType.sorting!)")
+            sortingMethod(filterType.sorting!)
         case .distance:
             print("User Selected: \(filterType.sorting!)")
+            sortingMethod(filterType.sorting!)
         case .deliveryCost:
             print("User Selected: \(filterType.sorting!)")
+            sortingMethod(filterType.sorting!)
         case .bestMatch:
             print("User Selected: \(filterType.sorting!)")
+            sortingMethod(filterType.sorting!)
         case .avgPrice:
             print("User Selected: \(filterType.sorting!)")
+            sortingMethod(filterType.sorting!)
         case .newest:
             print("User Selected: \(filterType.sorting!)")
+            sortingMethod(filterType.sorting!)
         }
+    }
+    
+    private func sortingMethod(_ sortingString : String) {
+        let restaurants = RealmHandler.shared.realm.objects(ETAVendorsList.self)
+        presenter!.interactor(self, didFetch: restaurants
+            .sorted(byKeyPath: "status", ascending: false)
+            .sorted(byKeyPath: "\(sortingString)", ascending: true)
+            .sorted(byKeyPath: "isFavourite", ascending: false)
+        )
     }
 }
