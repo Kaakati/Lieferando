@@ -12,7 +12,7 @@ import RealmSwift
 
 /// TAVendorsList Module Interactor
 class ITAVendorsList: ITAVendorsListProtocol {
-    
+
     // Realm ObservationToken
     var notificationToken: NotificationToken?
     
@@ -52,8 +52,8 @@ class ITAVendorsList: ITAVendorsListProtocol {
             self.notificationToken = RealmHandler.shared.realm.observe { [unowned self] note, realm in
                 let restaurants = RealmHandler.shared.realm.objects(ETAVendorsList.self)
                 presenter.interactor(self, didFetch: restaurants
-                    .sorted(byKeyPath: "isFavourite", ascending: false)
                     .sorted(byKeyPath: "status", ascending: false)
+                    .sorted(byKeyPath: "isFavourite", ascending: false)
                 )
             }
         }
@@ -65,13 +65,14 @@ class ITAVendorsList: ITAVendorsListProtocol {
         if !stringValue.isEmpty {
             presenter!.interactor(self, didFetch: restaurants
                 .filter("name CONTAINS '\(stringValue)'")
-                .sorted(byKeyPath: "isFavourite", ascending: false)
+                .sorted(byKeyPath: "\(stringValue.camelCased)", ascending: false)
                 .sorted(byKeyPath: "status", ascending: false)
+                .sorted(byKeyPath: "isFavourite", ascending: false)
             )
         } else {
             presenter!.interactor(self, didFetch: restaurants
-                .sorted(byKeyPath: "isFavourite", ascending: false)
                 .sorted(byKeyPath: "status", ascending: false)
+                .sorted(byKeyPath: "isFavourite", ascending: false)
             )
         }
     }
@@ -85,6 +86,34 @@ class ITAVendorsList: ITAVendorsListProtocol {
         let restaurant = RealmHandler.shared.realm.objects(ETAVendorsList.self).filter("id == %@", id).first!
         try! RealmHandler.shared.realm.write {
             restaurant.isFavourite = !restaurant.isFavourite
+        }
+    }
+    
+    // Sorting
+    func sortingResults(_ presenter: PTAVendorsListProtocol, filterType: AvailableSortings) {
+        switch filterType {
+        case .reset:
+            print("User Selected: \(filterType.sorting!)")
+        case .status:
+            print("User Selected: \(filterType.sorting!)")
+        case .rating:
+            print("User Selected: \(filterType.sorting!)")
+        case .popularity:
+            print("User Selected: \(filterType.sorting!)")
+        case .minimumCost:
+            print("User Selected: \(filterType.sorting!)")
+        case .favourite:
+            print("User Selected: \(filterType.sorting!)")
+        case .distance:
+            print("User Selected: \(filterType.sorting!)")
+        case .deliveryCost:
+            print("User Selected: \(filterType.sorting!)")
+        case .bestMatch:
+            print("User Selected: \(filterType.sorting!)")
+        case .avgPrice:
+            print("User Selected: \(filterType.sorting!)")
+        case .newest:
+            print("User Selected: \(filterType.sorting!)")
         }
     }
 }

@@ -17,7 +17,7 @@ protocol VTAVendorsListUIDelegate {
   // Send Events to Module View, that will send events to the Presenter; which will send events to the Receiver e.g. Protocol OR Component.
     func userDidTapFavouriteBtn(_ forObjectID: String)
     
-    func userDidTapFilterButton()
+    func userDidTapFilterButton(_ sortingValue : AvailableSortings)
 //    func userDidSelectFilter(_ filterValue : String)
     func userSearchEvent(_ ofString: String)
 }
@@ -203,16 +203,13 @@ extension VTAVendorsListUI : UITableViewDelegate {
 }
 
 extension VTAVendorsListUI {
-//    private func fetchRestaurantsList() {
-//        self.restaurants = RealmHandler.shared.realm.objects(RestaurantEntity.self)
-//    }
+
 }
 
 // MARK: - PickerView Implementation
 extension VTAVendorsListUI : UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(AvailableSortings.init(rawValue: row)?.stringValue ?? "N/A")
-//        delegate?.userDidSelectFilter(AvailableSortings.init(rawValue: row)?.stringValue ?? "N/A")
+        delegate?.userDidTapFilterButton(AvailableSortings.init(rawValue: row)!)
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -241,6 +238,7 @@ extension VTAVendorsListUI : UIPickerViewDataSource {
 
 
 enum AvailableSortings : Int, CaseIterable {
+    case reset
     case status
     case favourite
     case bestMatch
@@ -254,6 +252,8 @@ enum AvailableSortings : Int, CaseIterable {
     
     var stringValue : String? {
         switch self {
+        case .reset:
+            return "Reset"
         case .status:
             return "Status"
         case .favourite:
@@ -269,11 +269,38 @@ enum AvailableSortings : Int, CaseIterable {
         case .popularity:
             return "Popularity"
         case .avgPrice:
-            return "Product Price"
+            return "Avg. Product Price"
         case .deliveryCost:
             return "Delivery Cost"
         case .minimumCost:
             return "Minimum Cost"
+        }
+    }
+    
+    var sorting : String? {
+        switch self {
+        case .reset:
+            return "Reset"
+        case .status:
+            return "status"
+        case .favourite:
+            return "isFavourite"
+        case .bestMatch:
+            return "sortingValues.bestMatch"
+        case .newest:
+            return "sortingValues.newest"
+        case .rating:
+            return "sortingValues.ratingAverage"
+        case .distance:
+            return "sortingValues.distance"
+        case .popularity:
+            return "sortingValues.popularity"
+        case .avgPrice:
+            return "sortingValues.averageProductPrice"
+        case .deliveryCost:
+            return "sortingValues.deliveryCosts"
+        case .minimumCost:
+            return "sortingValues.minCost"
         }
     }
 }

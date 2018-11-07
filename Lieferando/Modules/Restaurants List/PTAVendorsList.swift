@@ -33,6 +33,10 @@ class PTAVendorsList {
 // MARK: - extending PTAVendorsList to implement it's protocol
 extension PTAVendorsList: PTAVendorsListProtocol {
     
+    func sortingResults(_ onView: VTAVendorsListProtocol, filterType: AvailableSortings) {
+        interactor.sortingResults(self, filterType: filterType)
+    }
+    
     func userSearchEvent(_ stringValue: String) {
         //
         interactor.userSearchEvent(stringValue)
@@ -62,9 +66,14 @@ extension PTAVendorsList: PTAVendorsListProtocol {
         // Handle the failure message.
     }
     
-    func viewDidFilterResults(_ interactor: ITAVendorsListProtocol) {
-        interactor.filterResults(objectFor: self)
+    func viewDidRequestSortingResults(_ interactor: ITAVendorsListProtocol, filterType: AvailableSortings) {
+        interactor.sortingResults(self, filterType: filterType)
     }
+    
+//    func viewDidFilterResults(_ interactor: ITAVendorsListProtocol) {
+//        interactor.sortingResults(self, filterType: <#T##AvailableSortings#>)
+////        interactor.filterResults(objectFor: self)
+//    }
     
     @objc func filterAction() {
         print("filter")

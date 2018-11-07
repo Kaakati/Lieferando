@@ -54,14 +54,19 @@ extension VTAVendorsList: VTAVendorsListProtocol {
 
 // MARK: - extending VTAVendorsList to implement the custom ui view delegate
 extension VTAVendorsList: VTAVendorsListUIDelegate {
-    
+    //
+    func userDidTapFilterButton(_ sortingValue: AvailableSortings) {
+        presenter.sortingResults(self, filterType: sortingValue)
+    }
+    //
     func userSearchEvent(_ ofString: String) {
         presenter.userSearchEvent(ofString)
     }
     
-    func userDidTapFilterButton() {
-        presenter.userDidTapFilterBtn(self)
-    }
+//    func userDidTapFilterButton() {
+//
+////        presenter.userDidTapFilterBtn(self)
+//    }
     
     // Send Favourite Button Event to Presenter
     func userDidTapFavouriteBtn(_ onItemID: String) {

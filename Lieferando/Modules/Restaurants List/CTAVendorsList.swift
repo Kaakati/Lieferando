@@ -32,7 +32,7 @@ protocol ITAVendorsListProtocol {
 	// Fetch Object from Data Layer
 	func fetch(objectFor presenter: PTAVendorsListProtocol)
     // User Did Filter Results
-    func filterResults(objectFor presenter: PTAVendorsListProtocol)
+    func sortingResults(_ presenter: PTAVendorsListProtocol, filterType : AvailableSortings)
     //
     func userDidTapFavouriteBtn(_ presenter: PTAVendorsListProtocol, forObject id: String)
     //
@@ -49,11 +49,12 @@ protocol PTAVendorsListProtocol {
 	/// The Interactor will inform the Presenter a failed fetch.
 	func interactor(_ interactor: ITAVendorsListProtocol, didFailWith error: Error)
     
-    func viewDidFilterResults(_ interactor: ITAVendorsListProtocol)
-    
     func userDidTapFavouriteBtn(_ onView: VTAVendorsListProtocol, forObject id: String)
     
-    func userDidTapFilterBtn(_ onView: VTAVendorsListProtocol)
+    func sortingResults(_ onView: VTAVendorsListProtocol, filterType : AvailableSortings)
+    
+    func viewDidRequestSortingResults(_ interactor: ITAVendorsListProtocol, filterType : AvailableSortings)
+    
 //    func shouldOpenFilters(_ fromView: VTAVendorsListProtocol, withValues value: String)
     
     func userSearchEvent(_ stringValue : String)
