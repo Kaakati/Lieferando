@@ -77,7 +77,7 @@ class VTAVendorsListUI: UIView {
         let tf = UITextField()
         tf.backgroundColor = UIColor.init(hexString: "FAFAFA")
         tf.addPaddingLeft(15) // SwifterSwift for the rescue.
-        tf.placeholder = "Search Restaurants"
+        tf.placeholder = "Search All Restaurants"
         tf.inputAccessoryView = setToolbar()
         tf.addTarget(self, action: #selector(userSearchEvent(textField:)), for: UIControl.Event.editingChanged)
         tf.translatesAutoresizingMaskIntoConstraints = false
@@ -169,6 +169,24 @@ extension VTAVendorsListUI : UITableViewDataSource {
         return 1
     }
     
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        let sortingString = AvailableSortings.init(rawValue: filterPicker.selectedRow(inComponent: 0))?.stringValue ?? "Showing All"
+//        return "Sorting by: \(sortingString)"
+//    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        let lbl = UILabel()
+        headerView.addSubview(lbl)
+        headerView.backgroundColor = .white
+        let sortingString = AvailableSortings.init(rawValue: filterPicker.selectedRow(inComponent: 0))?.stringValue ?? "Showing All"
+        lbl.anchor(top: headerView.topAnchor, left: headerView.leftAnchor, bottom: headerView.bottomAnchor, right: headerView.rightAnchor, topConstant: 5, leftConstant: 15, bottomConstant: 5, rightConstant: 15, widthConstant: 0, heightConstant: 0)
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.font = Themes.Fonts.Tags
+        lbl.text = "Sorting by: \(sortingString)"
+        return headerView
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.object?.count ?? 0
     }
@@ -253,7 +271,7 @@ enum AvailableSortings : Int, CaseIterable {
     var stringValue : String? {
         switch self {
         case .reset:
-            return "Reset"
+            return "Showing All"
         case .status:
             return "Status"
         case .favourite:

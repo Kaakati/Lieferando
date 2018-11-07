@@ -95,7 +95,11 @@ class ITAVendorsList: ITAVendorsListProtocol {
         switch filterType {
         case .reset:
             print("User Selected: \(filterType.sorting!)")
-            sortingMethod(filterType.sorting!)
+            let restaurants = RealmHandler.shared.realm.objects(ETAVendorsList.self)
+            self.presenter!.interactor(self, didFetch: restaurants
+                .sorted(byKeyPath: "status", ascending: false)
+                .sorted(byKeyPath: "isFavourite", ascending: false)
+            )
         case .status:
             print("User Selected: \(filterType.sorting!)")
             sortingMethod(filterType.sorting!)

@@ -131,7 +131,9 @@ class VendorCellUI: UIView {
                                              vendorDelivery,
                                              vendorDistance,
                                              vendorRatingAvg,
-                                             vendorBestMatch])
+                                             vendorBestMatch,
+                                             vendorProductAvgPrice,
+                                             vendorPopularity])
         setupConstraints()
     }
     
